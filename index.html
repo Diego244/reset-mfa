@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reset de Senha | Central MFA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🔐 Central de Reset de Senhas</h1>
+    <p>Simulação de MFA + Logging</p>
+
+    <form id="reset-form">
+      <input type="email" id="email" placeholder="Digite seu e-mail corporativo" required />
+      <button type="submit">Enviar Código</button>
+    </form>
+
+    <div id="mfa-section" class="hidden">
+      <p>Enviamos um código para seu dispositivo.</p>
+      <input type="text" id="mfa-code" placeholder="Digite o código MFA" maxlength="6" required />
+      <button id="verify-btn">Verificar Código</button>
+    </div>
+
+    <div class="actions">
+      <button id="show-logs">📄 Ver Logs</button>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
